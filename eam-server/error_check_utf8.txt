@@ -1,0 +1,166 @@
+﻿[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------------< com.eam:eam-server >-------------------------
+[INFO] Building eam-server 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ eam-server ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 4 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ eam-server ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 57 source files with javac [debug release 17] to target\classes
+[INFO] -------------------------------------------------------------
+[WARNING] COMPILATION WARNING : 
+[INFO] -------------------------------------------------------------
+[WARNING] 未知的枚举常量 javax.annotation.meta.When.MAYBE
+  原因: 找不到javax.annotation.meta.When的类文件
+[INFO] 1 warning
+[INFO] -------------------------------------------------------------
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /E:/project/workflow-asset/eam-server/src/main/java/com/eam/workflow/controller/AmsRequestBillController.java:[73,15] 找不到符号
+  符号:   方法 setTaskId(java.lang.String)
+  位置: 类型为com.eam.workflow.entity.vo.WorkflowTaskVO的变量 vo
+[ERROR] /E:/project/workflow-asset/eam-server/src/main/java/com/eam/workflow/controller/AmsRequestBillController.java:[74,15] 找不到符号
+  符号:   方法 setTaskName(java.lang.String)
+  位置: 类型为com.eam.workflow.entity.vo.WorkflowTaskVO的变量 vo
+[ERROR] /E:/project/workflow-asset/eam-server/src/main/java/com/eam/workflow/controller/AmsRequestBillController.java:[75,15] 找不到符号
+  符号:   方法 setProcessInstanceId(java.lang.String)
+  位置: 类型为com.eam.workflow.entity.vo.WorkflowTaskVO的变量 vo
+[ERROR] /E:/project/workflow-asset/eam-server/src/main/java/com/eam/workflow/controller/AmsRequestBillController.java:[76,15] 找不到符号
+  符号:   方法 setAssignee(java.lang.String)
+  位置: 类型为com.eam.workflow.entity.vo.WorkflowTaskVO的变量 vo
+[ERROR] /E:/project/workflow-asset/eam-server/src/main/java/com/eam/workflow/controller/AmsRequestBillController.java:[77,15] 找不到符号
+  符号:   方法 setCreateTime(java.util.Date)
+  位置: 类型为com.eam.workflow.entity.vo.WorkflowTaskVO的变量 vo
+[ERROR] /E:/project/workflow-asset/eam-server/src/main/java/com/eam/workflow/controller/AmsRequestBillController.java:[83,19] 找不到符号
+  符号:   方法 setBillId(java.lang.String)
+  位置: 类型为com.eam.workflow.entity.vo.WorkflowTaskVO的变量 vo
+[ERROR] /E:/project/workflow-asset/eam-server/src/main/java/com/eam/workflow/controller/AmsRequestBillController.java:[84,19] 找不到符号
+  符号:   方法 setBillType(java.lang.String)
+  位置: 类型为com.eam.workflow.entity.vo.WorkflowTaskVO的变量 vo
+[ERROR] /E:/project/workflow-asset/eam-server/src/main/java/com/eam/workflow/controller/AmsRequestBillController.java:[85,19] 找不到符号
+  符号:   方法 setReason(java.lang.String)
+  位置: 类型为com.eam.workflow.entity.vo.WorkflowTaskVO的变量 vo
+[ERROR] /E:/project/workflow-asset/eam-server/src/main/java/com/eam/workflow/controller/AmsRequestBillController.java:[86,19] 找不到符号
+  符号:   方法 setAssetId(java.lang.Long)
+  位置: 类型为com.eam.workflow.entity.vo.WorkflowTaskVO的变量 vo
+[ERROR] /E:/project/workflow-asset/eam-server/src/main/java/com/eam/workflow/controller/AmsRequestBillController.java:[90,23] 找不到符号
+  符号:   方法 setAssetName(java.lang.String)
+  位置: 类型为com.eam.workflow.entity.vo.WorkflowTaskVO的变量 vo
+[ERROR] /E:/project/workflow-asset/eam-server/src/main/java/com/eam/workflow/controller/AmsRequestBillController.java:[93,15] 找不到符号
+  符号:   方法 setProcessDefinitionId(java.lang.String)
+  位置: 类型为com.eam.workflow.entity.vo.WorkflowTaskVO的变量 vo
+[ERROR] /E:/project/workflow-asset/eam-server/src/main/java/com/eam/workflow/controller/AmsRequestBillController.java:[94,15] 找不到符号
+  符号:   方法 setTaskDefinitionKey(java.lang.String)
+  位置: 类型为com.eam.workflow.entity.vo.WorkflowTaskVO的变量 vo
+[ERROR] /E:/project/workflow-asset/eam-server/src/main/java/com/eam/workflow/controller/WorkflowDefinitionController.java:[36,15] 找不到符号
+  符号:   方法 setId(java.lang.String)
+  位置: 类型为com.eam.workflow.entity.vo.ProcessDefinitionVO的变量 vo
+[ERROR] /E:/project/workflow-asset/eam-server/src/main/java/com/eam/workflow/controller/WorkflowDefinitionController.java:[37,15] 找不到符号
+  符号:   方法 setName(java.lang.String)
+  位置: 类型为com.eam.workflow.entity.vo.ProcessDefinitionVO的变量 vo
+[ERROR] /E:/project/workflow-asset/eam-server/src/main/java/com/eam/workflow/controller/WorkflowDefinitionController.java:[38,15] 找不到符号
+  符号:   方法 setKey(java.lang.String)
+  位置: 类型为com.eam.workflow.entity.vo.ProcessDefinitionVO的变量 vo
+[ERROR] /E:/project/workflow-asset/eam-server/src/main/java/com/eam/workflow/controller/WorkflowDefinitionController.java:[39,15] 找不到符号
+  符号:   方法 setVersion(int)
+  位置: 类型为com.eam.workflow.entity.vo.ProcessDefinitionVO的变量 vo
+[ERROR] /E:/project/workflow-asset/eam-server/src/main/java/com/eam/workflow/controller/WorkflowDefinitionController.java:[40,15] 找不到符号
+  符号:   方法 setDeploymentId(java.lang.String)
+  位置: 类型为com.eam.workflow.entity.vo.ProcessDefinitionVO的变量 vo
+[ERROR] /E:/project/workflow-asset/eam-server/src/main/java/com/eam/workflow/controller/WorkflowDefinitionController.java:[41,15] 找不到符号
+  符号:   方法 setResourceName(java.lang.String)
+  位置: 类型为com.eam.workflow.entity.vo.ProcessDefinitionVO的变量 vo
+[ERROR] /E:/project/workflow-asset/eam-server/src/main/java/com/eam/workflow/controller/WorkflowDefinitionController.java:[42,15] 找不到符号
+  符号:   方法 setDescription(java.lang.String)
+  位置: 类型为com.eam.workflow.entity.vo.ProcessDefinitionVO的变量 vo
+[ERROR] /E:/project/workflow-asset/eam-server/src/main/java/com/eam/workflow/controller/WorkflowDefinitionController.java:[54,13] 找不到符号
+  符号:   变量 log
+  位置: 类 com.eam.workflow.controller.WorkflowDefinitionController
+[ERROR] /E:/project/workflow-asset/eam-server/src/main/java/com/eam/workflow/controller/WorkflowDefinitionController.java:[66,13] 找不到符号
+  符号:   变量 log
+  位置: 类 com.eam.workflow.controller.WorkflowDefinitionController
+[INFO] 21 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.627 s
+[INFO] Finished at: 2026-03-14T14:48:13+08:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.11.0:compile (default-compile) on project eam-server: Compilation failure: Compilation failure: 
+[ERROR] /E:/project/workflow-asset/eam-server/src/main/java/com/eam/workflow/controller/AmsRequestBillController.java:[73,15] 找不到符号
+[ERROR]   符号:   方法 setTaskId(java.lang.String)
+[ERROR]   位置: 类型为com.eam.workflow.entity.vo.WorkflowTaskVO的变量 vo
+[ERROR] /E:/project/workflow-asset/eam-server/src/main/java/com/eam/workflow/controller/AmsRequestBillController.java:[74,15] 找不到符号
+[ERROR]   符号:   方法 setTaskName(java.lang.String)
+[ERROR]   位置: 类型为com.eam.workflow.entity.vo.WorkflowTaskVO的变量 vo
+[ERROR] /E:/project/workflow-asset/eam-server/src/main/java/com/eam/workflow/controller/AmsRequestBillController.java:[75,15] 找不到符号
+[ERROR]   符号:   方法 setProcessInstanceId(java.lang.String)
+[ERROR]   位置: 类型为com.eam.workflow.entity.vo.WorkflowTaskVO的变量 vo
+[ERROR] /E:/project/workflow-asset/eam-server/src/main/java/com/eam/workflow/controller/AmsRequestBillController.java:[76,15] 找不到符号
+[ERROR]   符号:   方法 setAssignee(java.lang.String)
+[ERROR]   位置: 类型为com.eam.workflow.entity.vo.WorkflowTaskVO的变量 vo
+[ERROR] /E:/project/workflow-asset/eam-server/src/main/java/com/eam/workflow/controller/AmsRequestBillController.java:[77,15] 找不到符号
+[ERROR]   符号:   方法 setCreateTime(java.util.Date)
+[ERROR]   位置: 类型为com.eam.workflow.entity.vo.WorkflowTaskVO的变量 vo
+[ERROR] /E:/project/workflow-asset/eam-server/src/main/java/com/eam/workflow/controller/AmsRequestBillController.java:[83,19] 找不到符号
+[ERROR]   符号:   方法 setBillId(java.lang.String)
+[ERROR]   位置: 类型为com.eam.workflow.entity.vo.WorkflowTaskVO的变量 vo
+[ERROR] /E:/project/workflow-asset/eam-server/src/main/java/com/eam/workflow/controller/AmsRequestBillController.java:[84,19] 找不到符号
+[ERROR]   符号:   方法 setBillType(java.lang.String)
+[ERROR]   位置: 类型为com.eam.workflow.entity.vo.WorkflowTaskVO的变量 vo
+[ERROR] /E:/project/workflow-asset/eam-server/src/main/java/com/eam/workflow/controller/AmsRequestBillController.java:[85,19] 找不到符号
+[ERROR]   符号:   方法 setReason(java.lang.String)
+[ERROR]   位置: 类型为com.eam.workflow.entity.vo.WorkflowTaskVO的变量 vo
+[ERROR] /E:/project/workflow-asset/eam-server/src/main/java/com/eam/workflow/controller/AmsRequestBillController.java:[86,19] 找不到符号
+[ERROR]   符号:   方法 setAssetId(java.lang.Long)
+[ERROR]   位置: 类型为com.eam.workflow.entity.vo.WorkflowTaskVO的变量 vo
+[ERROR] /E:/project/workflow-asset/eam-server/src/main/java/com/eam/workflow/controller/AmsRequestBillController.java:[90,23] 找不到符号
+[ERROR]   符号:   方法 setAssetName(java.lang.String)
+[ERROR]   位置: 类型为com.eam.workflow.entity.vo.WorkflowTaskVO的变量 vo
+[ERROR] /E:/project/workflow-asset/eam-server/src/main/java/com/eam/workflow/controller/AmsRequestBillController.java:[93,15] 找不到符号
+[ERROR]   符号:   方法 setProcessDefinitionId(java.lang.String)
+[ERROR]   位置: 类型为com.eam.workflow.entity.vo.WorkflowTaskVO的变量 vo
+[ERROR] /E:/project/workflow-asset/eam-server/src/main/java/com/eam/workflow/controller/AmsRequestBillController.java:[94,15] 找不到符号
+[ERROR]   符号:   方法 setTaskDefinitionKey(java.lang.String)
+[ERROR]   位置: 类型为com.eam.workflow.entity.vo.WorkflowTaskVO的变量 vo
+[ERROR] /E:/project/workflow-asset/eam-server/src/main/java/com/eam/workflow/controller/WorkflowDefinitionController.java:[36,15] 找不到符号
+[ERROR]   符号:   方法 setId(java.lang.String)
+[ERROR]   位置: 类型为com.eam.workflow.entity.vo.ProcessDefinitionVO的变量 vo
+[ERROR] /E:/project/workflow-asset/eam-server/src/main/java/com/eam/workflow/controller/WorkflowDefinitionController.java:[37,15] 找不到符号
+[ERROR]   符号:   方法 setName(java.lang.String)
+[ERROR]   位置: 类型为com.eam.workflow.entity.vo.ProcessDefinitionVO的变量 vo
+[ERROR] /E:/project/workflow-asset/eam-server/src/main/java/com/eam/workflow/controller/WorkflowDefinitionController.java:[38,15] 找不到符号
+[ERROR]   符号:   方法 setKey(java.lang.String)
+[ERROR]   位置: 类型为com.eam.workflow.entity.vo.ProcessDefinitionVO的变量 vo
+[ERROR] /E:/project/workflow-asset/eam-server/src/main/java/com/eam/workflow/controller/WorkflowDefinitionController.java:[39,15] 找不到符号
+[ERROR]   符号:   方法 setVersion(int)
+[ERROR]   位置: 类型为com.eam.workflow.entity.vo.ProcessDefinitionVO的变量 vo
+[ERROR] /E:/project/workflow-asset/eam-server/src/main/java/com/eam/workflow/controller/WorkflowDefinitionController.java:[40,15] 找不到符号
+[ERROR]   符号:   方法 setDeploymentId(java.lang.String)
+[ERROR]   位置: 类型为com.eam.workflow.entity.vo.ProcessDefinitionVO的变量 vo
+[ERROR] /E:/project/workflow-asset/eam-server/src/main/java/com/eam/workflow/controller/WorkflowDefinitionController.java:[41,15] 找不到符号
+[ERROR]   符号:   方法 setResourceName(java.lang.String)
+[ERROR]   位置: 类型为com.eam.workflow.entity.vo.ProcessDefinitionVO的变量 vo
+[ERROR] /E:/project/workflow-asset/eam-server/src/main/java/com/eam/workflow/controller/WorkflowDefinitionController.java:[42,15] 找不到符号
+[ERROR]   符号:   方法 setDescription(java.lang.String)
+[ERROR]   位置: 类型为com.eam.workflow.entity.vo.ProcessDefinitionVO的变量 vo
+[ERROR] /E:/project/workflow-asset/eam-server/src/main/java/com/eam/workflow/controller/WorkflowDefinitionController.java:[54,13] 找不到符号
+[ERROR]   符号:   变量 log
+[ERROR]   位置: 类 com.eam.workflow.controller.WorkflowDefinitionController
+[ERROR] /E:/project/workflow-asset/eam-server/src/main/java/com/eam/workflow/controller/WorkflowDefinitionController.java:[66,13] 找不到符号
+[ERROR]   符号:   变量 log
+[ERROR]   位置: 类 com.eam.workflow.controller.WorkflowDefinitionController
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

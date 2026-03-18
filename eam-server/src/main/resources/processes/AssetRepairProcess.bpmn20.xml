@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:flowable="http://flowable.org/bpmn"
+             typeLanguage="http://www.w3.org/2001/XMLSchema"
+             expressionLanguage="http://www.w3.org/1999/XPath"
+             targetNamespace="http://www.flowable.org/processdef"
+             id="AssetRepairDefinition">
+
+    <process id="AssetRepairProcess" name="资产报修流程" isExecutable="true">
+
+        <startEvent id="start" name="报修申请"></startEvent>
+        <sequenceFlow id="flow1" sourceRef="start" targetRef="itAudit"></sequenceFlow>
+
+        <!-- 第一级：IT人员核损与维修方案 -->
+        <userTask id="itAudit" name="IT核损确认" flowable:assignee="1">
+            <!-- 这里的 1 代表 IT管理员/固定资产管理员 -->
+        </userTask>
+        <sequenceFlow id="flow2" sourceRef="itAudit" targetRef="itGateway"></sequenceFlow>
+
+        <exclusiveGateway id="itGateway" name="核损决策"></exclusiveGateway>
+        <sequenceFlow id="flow_it_ok" sourceRef="itGateway" targetRef="repairAction">
+            <conditionExpression xsi:type="tFormalExpression">${approved}</conditionExpression>
+        </sequenceFlow>
+        <sequenceFlow id="flow_it_reject" sourceRef="itGateway" targetRef="endRejected">
+            <conditionExpression xsi:type="tFormalExpression">${!approved}</conditionExpression>
+        </sequenceFlow>
+
+        <!-- 第二级：维修执行确认（填写维修费用等） -->
+        <userTask id="repairAction" name="维修结果登记" flowable:assignee="1">
+        </userTask>
+        <sequenceFlow id="flow3" sourceRef="repairAction" targetRef="endApproved"></sequenceFlow>
+
+        <!-- 流程结束：审批通过（资产恢复可用） -->
+        <endEvent id="endApproved" name="维修完成结束">
+            <extensionElements>
+                <flowable:executionListener event="end" delegateExpression="${assetRepairExecutionListener}"></flowable:executionListener>
+            </extensionElements>
+        </endEvent>
+
+        <!-- 流程结束：审批驳回（资产维持现状或转报废建议） -->
+        <endEvent id="endRejected" name="报修驳回结束">
+            <extensionElements>
+                <flowable:executionListener event="end" delegateExpression="${assetRejectExecutionListener}"></flowable:executionListener>
+            </extensionElements>
+        </endEvent>
+
+    </process>
+</definitions>

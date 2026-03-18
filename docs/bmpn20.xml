@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:flowable="http://flowable.org/bpmn"
+             targetNamespace="http://www.flowable.org/processdef">
+
+    <!--流程定义：id(key)必须唯一，name为显示名称 -->
+    <process id="CustomApprovalProcess" name="自定义资产审批流程" isExecutable="true">
+
+        <!-- 1. 开始事件 -->
+        <startEvent id="start" name="发起申请" />
+        <sequenceFlow id="f1" sourceRef="start" targetRef="deptLeaderAudit" />
+
+        <!-- 2. 动态寻址：使用你现有的 DeptRoutingService 寻找部门负责人 -->
+        <userTask id="deptLeaderAudit" name="部门负责人审批" 
+                  flowable:assignee="${deptRoutingService.findDeptLeader(initiatorDeptId)}" />
+        <sequenceFlow id="f2" sourceRef="deptLeaderAudit" targetRef="conditionGateway" />
+
+        <!-- 3. 排他网关（条件分支）：根据表单变量分流 -->
+        <exclusiveGateway id="conditionGateway" name="金额或级别判定" />
+        
+        <!-- 分支 A：常规审批 -> 发放 (如金额 <= 1000) -->
+        <sequenceFlow id="f_small" name="常规金额" sourceRef="conditionGateway" targetRef="adminAudit">
+            <conditionExpression xsi:type="tFormalExpression">${amount &lt;= 1000}</conditionExpression>
+        </sequenceFlow>
+        
+        <!-- 分支 B：大额审批 -> 向上递归中心主任 (如金额 > 1000) -->
+        <sequenceFlow id="f_large" name="大额资产" sourceRef="conditionGateway" targetRef="directorAudit">
+            <conditionExpression xsi:type="tFormalExpression">${amount &gt; 1000}</conditionExpression>
+        </sequenceFlow>
+
+        <!-- 中心主任节点 -->
+        <userTask id="directorAudit" name="中心主任审批" 
+                  flowable:assignee="${deptRoutingService.findCenterDirector(initiatorDeptId)}" />
+        <sequenceFlow id="f3" sourceRef="directorAudit" targetRef="adminAudit" />
+
+        <!-- 4. 固定角色/用户审批节点 (此处1代表固定的资产管理员ID) -->
+        <userTask id="adminAudit" name="资产管理员确认" flowable:assignee="1" />
+        <sequenceFlow id="f4" sourceRef="adminAudit" targetRef="endApproved" />
+
+        <!-- 5. 结束事件：挂载你现有的资产状态监听器 -->
+        <endEvent id="endApproved" name="审批通过结束">
+            <extensionElements>
+                <!-- 联动 AmsAsset 状态机 -->
+                <flowable:executionListener event="end" delegateExpression="${assetStateExecutionListener}" />
+            </extensionElements>
+        </endEvent>
+
+    </process>
+</definitions>

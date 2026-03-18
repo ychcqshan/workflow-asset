@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:flowable="http://flowable.org/bpmn"
+             typeLanguage="http://www.w3.org/2001/XMLSchema"
+             expressionLanguage="http://www.w3.org/1999/XPath"
+             targetNamespace="http://www.flowable.org/processdef"
+             id="AssetScrapDefinition">
+
+    <process id="AssetScrapProcess" name="资产报废流程" isExecutable="true">
+
+        <startEvent id="start" name="报废申请"></startEvent>
+        <sequenceFlow id="flow1" sourceRef="start" targetRef="directorAudit"></sequenceFlow>
+
+        <!-- 第一级：部门中心主任审批 -->
+        <userTask id="directorAudit" name="中心主任审批" flowable:assignee="${deptRoutingService.findCenterDirector(initiatorDeptId)}">
+        </userTask>
+        <sequenceFlow id="flow2" sourceRef="directorAudit" targetRef="directorGateway"></sequenceFlow>
+
+        <exclusiveGateway id="directorGateway" name="主任决策"></exclusiveGateway>
+        <sequenceFlow id="flow_dir_ok" sourceRef="directorGateway" targetRef="itAdminAudit">
+            <conditionExpression xsi:type="tFormalExpression">${approved}</conditionExpression>
+        </sequenceFlow>
+        <sequenceFlow id="flow_dir_reject" sourceRef="directorGateway" targetRef="endRejected">
+            <conditionExpression xsi:type="tFormalExpression">${!approved}</conditionExpression>
+        </sequenceFlow>
+
+        <!-- 第二级：资产管理员核实状态 -->
+        <userTask id="itAdminAudit" name="资产管理员核实" flowable:assignee="1">
+        </userTask>
+        <sequenceFlow id="flow3" sourceRef="itAdminAudit" targetRef="adminGateway"></sequenceFlow>
+
+        <exclusiveGateway id="adminGateway" name="管理员决策"></exclusiveGateway>
+        <sequenceFlow id="flow_admin_ok" sourceRef="adminGateway" targetRef="financeAudit">
+            <conditionExpression xsi:type="tFormalExpression">${approved}</conditionExpression>
+        </sequenceFlow>
+        <sequenceFlow id="flow_admin_reject" sourceRef="adminGateway" targetRef="endRejected">
+            <conditionExpression xsi:type="tFormalExpression">${!approved}</conditionExpression>
+        </sequenceFlow>
+
+        <!-- 第三级：财务人员确认（资产减值/下账） -->
+        <userTask id="financeAudit" name="财务审批确认" flowable:assignee="2"> 
+            <!-- 假设用户 ID 2 是财务主管 -->
+        </userTask>
+        <sequenceFlow id="flow4" sourceRef="financeAudit" targetRef="financeGateway"></sequenceFlow>
+
+        <exclusiveGateway id="financeGateway" name="财务决策"></exclusiveGateway>
+        <sequenceFlow id="flow_fin_ok" sourceRef="financeGateway" targetRef="endApproved">
+            <conditionExpression xsi:type="tFormalExpression">${approved}</conditionExpression>
+        </sequenceFlow>
+        <sequenceFlow id="flow_fin_reject" sourceRef="financeGateway" targetRef="endRejected">
+            <conditionExpression xsi:type="tFormalExpression">${!approved}</conditionExpression>
+        </sequenceFlow>
+
+        <!-- 流程结束：审批通过（资产标记为已报废） -->
+        <endEvent id="endApproved" name="报废完成结束">
+            <extensionElements>
+                <flowable:executionListener event="end" delegateExpression="${assetScrapExecutionListener}"></flowable:executionListener>
+            </extensionElements>
+        </endEvent>
+
+        <!-- 流程结束：审批驳回 -->
+        <endEvent id="endRejected" name="报废驳回结束">
+            <extensionElements>
+                <flowable:executionListener event="end" delegateExpression="${assetRejectExecutionListener}"></flowable:executionListener>
+            </extensionElements>
+        </endEvent>
+
+    </process>
+</definitions>

@@ -1,0 +1,42 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: eam-server
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/eam_db?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=GMT%2B8&allowPublicKeyRetrieval=true
+    username: ${MYSQL_USER:root}
+    password: ${MYSQL_PWD:password}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+      password: ${REDIS_PWD:}
+      key-prefix: "eam:"
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**/*.xml
+  type-aliases-package: com.eam.**.entity
+  configuration:
+    map-underline-to-camel-case: true
+
+logging:
+  level:
+    com.eam: debug
+
+flowable:
+  # 自动部署 classpath:processes 下的 bpmn
+  check-process-definitions: true
+  # 防止 Spring Boot 3 出现乱码
+  activity-font-name: Microsoft YaHei
+  label-font-name: Microsoft YaHei
+  annotation-font-name: Microsoft YaHei
+  # 异步执行器开关
+  async-executor-activate: true
+  # 数据库自动建表策略
+  database-schema-update: true

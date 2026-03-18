@@ -1,0 +1,40 @@
+# IDE
+.vscode/
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# System
+.DS_Store
+Thumbs.db
+nul
+
+# Build & Dependency
+**/node_modules/
+**/dist/
+**/target/
+*.class
+
+# AI / Agents
+.agent/
+.agents/
+.context/
+error.txt
+error_context.txt
+
+# Temporary / Scratch
+FindClass.class
+FindClass.java
+TestAutoLayout.class
+TestAutoLayout.java
+fix_pwd.sql
+fix_pwd_admin123.sql
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log

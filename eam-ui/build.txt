@@ -1,0 +1,101 @@
+
+> eam-ui@0.1.0 build
+> tsc && vite build
+
+node_modules/antd/es/_util/hooks/useForceUpdate.d.ts(2,59): error TS2694: Namespace 'React' has no exported member 'ActionDispatch'.
+node_modules/rc-picker/lib/PickerPanel/index.d.ts(40,18): error TS2430: Interface 'SinglePickerPanelProps<DateType>' incorrectly extends interface 'BasePickerPanelProps<DateType>'.
+  Types of property 'defaultValue' are incompatible.
+    Type 'DateType | null | undefined' is not assignable to type 'DateType | undefined'.
+      Type 'null' is not assignable to type 'DateType | undefined'.
+src/api/request.ts(4,26): error TS2339: Property 'env' does not exist on type 'ImportMeta'.
+src/pages/asset/ledger/index.tsx(11,29): error TS2304: Cannot find name 'useState'.
+src/pages/asset/ledger/index.tsx(12,35): error TS2304: Cannot find name 'useState'.
+src/pages/asset/ledger/index.tsx(13,31): error TS2304: Cannot find name 'useState'.
+src/pages/asset/ledger/index.tsx(14,43): error TS2304: Cannot find name 'useState'.
+src/pages/asset/ledger/index.tsx(15,35): error TS2304: Cannot find name 'useState'.
+src/pages/asset/ledger/index.tsx(16,49): error TS2304: Cannot find name 'useState'.
+src/pages/asset/ledger/index.tsx(18,41): error TS2304: Cannot find name 'useState'.
+src/pages/asset/ledger/index.tsx(19,43): error TS2304: Cannot find name 'useState'.
+src/pages/asset/ledger/index.tsx(20,45): error TS2304: Cannot find name 'useState'.
+src/pages/asset/ledger/index.tsx(22,47): error TS2304: Cannot find name 'useState'.
+src/pages/asset/ledger/index.tsx(23,45): error TS2304: Cannot find name 'useState'.
+src/pages/asset/ledger/index.tsx(48,5): error TS2304: Cannot find name 'useEffect'.
+src/pages/asset/ledger/index.tsx(165,18): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(175,18): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(176,22): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(177,22): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(177,48): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(178,22): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(178,48): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(179,22): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(179,55): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(214,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(215,14): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(216,18): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(217,22): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(218,26): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(220,22): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(221,26): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(223,34): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(227,22): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(228,26): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(228,55): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(229,26): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(229,40): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(233,14): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(236,22): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(237,26): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(238,30): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(238,44): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(240,26): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(240,55): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(244,18): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(258,14): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(265,18): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(266,22): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(267,26): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(268,30): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(269,34): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(272,26): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(273,30): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(274,34): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(275,53): error TS7006: Parameter 'cat' implicitly has an 'any' type.
+src/pages/asset/ledger/index.tsx(276,42): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(281,26): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(282,30): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(283,34): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(285,42): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(290,26): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(291,30): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(292,34): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(295,26): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(296,30): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(297,34): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(300,26): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(301,30): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(302,34): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(305,26): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(306,30): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(307,34): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(310,26): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(311,30): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(312,34): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(315,26): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(316,30): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(317,34): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(324,14): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(329,22): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(330,22): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(331,22): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(340,18): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(341,39): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(342,22): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(346,14): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(348,22): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(349,44): error TS7006: Parameter 'record' implicitly has an 'any' type.
+src/pages/asset/ledger/index.tsx(352,33): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(353,38): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(354,38): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(355,38): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(356,38): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/pages/asset/ledger/index.tsx(362,22): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.

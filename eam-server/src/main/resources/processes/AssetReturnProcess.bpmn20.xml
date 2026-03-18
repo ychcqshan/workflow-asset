@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:flowable="http://flowable.org/bpmn"
+             typeLanguage="http://www.w3.org/2001/XMLSchema"
+             expressionLanguage="http://www.w3.org/1999/XPath"
+             targetNamespace="http://www.flowable.org/processdef"
+             id="AssetReturnDefinition">
+
+    <process id="AssetReturnProcess" name="资产退库流程" isExecutable="true">
+
+        <startEvent id="start" name="开始申请"></startEvent>
+        <sequenceFlow id="flow1" sourceRef="start" targetRef="deptLeaderAudit"></sequenceFlow>
+
+        <!-- 第一级审批：部门长审批 -->
+        <userTask id="deptLeaderAudit" name="部门负责人审批" flowable:assignee="${deptRoutingService.findDeptLeader(initiatorDeptId)}">
+        </userTask>
+        <sequenceFlow id="flow2" sourceRef="deptLeaderAudit" targetRef="deptLeaderGateway"></sequenceFlow>
+
+        <exclusiveGateway id="deptLeaderGateway" name="部门长决策"></exclusiveGateway>
+        <sequenceFlow id="flow_dept_ok" sourceRef="deptLeaderGateway" targetRef="itAdminAudit">
+            <conditionExpression xsi:type="tFormalExpression">${approved}</conditionExpression>
+        </sequenceFlow>
+        <sequenceFlow id="flow_dept_reject" sourceRef="deptLeaderGateway" targetRef="endRejected">
+            <conditionExpression xsi:type="tFormalExpression">${!approved}</conditionExpression>
+        </sequenceFlow>
+
+        <!-- 第二级确认：管理员入库确认 -->
+        <userTask id="itAdminAudit" name="管理员入库确认" flowable:assignee="1">
+        </userTask>
+        <sequenceFlow id="flow3" sourceRef="itAdminAudit" targetRef="adminGateway"></sequenceFlow>
+
+        <exclusiveGateway id="adminGateway" name="管理员决策"></exclusiveGateway>
+        <sequenceFlow id="flow_admin_ok" sourceRef="adminGateway" targetRef="endApproved">
+            <conditionExpression xsi:type="tFormalExpression">${approved}</conditionExpression>
+        </sequenceFlow>
+        <sequenceFlow id="flow_admin_reject" sourceRef="adminGateway" targetRef="endRejected">
+            <conditionExpression xsi:type="tFormalExpression">${!approved}</conditionExpression>
+        </sequenceFlow>
+
+        <!-- 流程结束：审批通过 -->
+        <endEvent id="endApproved" name="审批通过结束">
+            <extensionElements>
+                <flowable:executionListener event="end" delegateExpression="${assetStateExecutionListener}"></flowable:executionListener>
+            </extensionElements>
+        </endEvent>
+
+        <!-- 流程结束：审批驳回 -->
+        <endEvent id="endRejected" name="审批驳回结束">
+            <extensionElements>
+                <flowable:executionListener event="end" delegateExpression="${assetRejectExecutionListener}"></flowable:executionListener>
+            </extensionElements>
+        </endEvent>
+
+    </process>
+</definitions>

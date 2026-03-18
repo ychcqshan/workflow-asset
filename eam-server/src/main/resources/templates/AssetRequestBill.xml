@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?mso-application progid="Word.Document"?>
+<w:wordDocument xmlns:w="http://schemas.microsoft.com/office/word/2003/wordml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:sl="http://schemas.microsoft.com/office/word/2003/wordml/sp1" xmlns:aml="http://schemas.microsoft.com/aml/2001/core" xmlns:wx="http://schemas.microsoft.com/office/word/2003/auxHint" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" w:macrosPresent="no" w:embeddedObjPresent="no" w:ocxPresent="no" xml:space="preserve">
+  <o:DocumentProperties>
+    <o:Title>资产申请单</o:Title>
+    <o:Author>EAM System</o:Author>
+  </o:DocumentProperties>
+  <w:body>
+    <wx:sect>
+      <w:p>
+        <w:pPr>
+          <w:jc w:val="center"/>
+          <w:rPr>
+            <w:b/>
+            <w:sz w:val="32"/>
+          </w:rPr>
+        </w:pPr>
+        <w:r>
+          <w:rPr>
+            <w:b/>
+            <w:sz w:val="32"/>
+          </w:rPr>
+          <w:t>${billType!""} 申请单</w:t>
+        </w:r>
+      </w:p>
+      <w:p/>
+      <w:tbl>
+        <w:tblPr>
+          <w:tblW w:w="5000" w:type="pct"/>
+          <w:tblBorders>
+            <w:top w:val="single" w:sz="4" wx:bdrwidth="10"/>
+            <w:left w:val="single" w:sz="4" wx:bdrwidth="10"/>
+            <w:bottom w:val="single" w:sz="4" wx:bdrwidth="10"/>
+            <w:right w:val="single" w:sz="4" wx:bdrwidth="10"/>
+            <w:insideH w:val="single" w:sz="4" wx:bdrwidth="10"/>
+            <w:insideV w:val="single" w:sz="4" wx:bdrwidth="10"/>
+          </w:tblBorders>
+        </w:tblPr>
+        <w:tblGrid>
+          <w:gridCol w:w="2500"/>
+          <w:gridCol w:w="2500"/>
+          <w:gridCol w:w="2500"/>
+          <w:gridCol w:w="2500"/>
+        </w:tblGrid>
+        
+        <w:tr>
+          <w:tc><w:p><w:r><w:t>单据编号</w:t></w:r></w:p></w:tc>
+          <w:tc><w:p><w:r><w:t>${id!""}</w:t></w:r></w:p></w:tc>
+          <w:tc><w:p><w:r><w:t>单据类型</w:t></w:r></w:p></w:tc>
+          <w:tc><w:p><w:r><w:t>${billType!""}</w:t></w:r></w:p></w:tc>
+        </w:tr>
+
+        <w:tr>
+          <w:tc><w:p><w:r><w:t>申请人</w:t></w:r></w:p></w:tc>
+          <w:tc><w:p><w:r><w:t>${initiatorName!""}</w:t></w:r></w:p></w:tc>
+          <w:tc><w:p><w:r><w:t>申请部门</w:t></w:r></w:p></w:tc>
+          <w:tc><w:p><w:r><w:t>${deptName!""}</w:t></w:r></w:p></w:tc>
+        </w:tr>
+
+        <w:tr>
+          <w:tc><w:p><w:r><w:t>申请时间</w:t></w:r></w:p></w:tc>
+          <w:tc><w:p><w:r><w:t>${createTime!""}</w:t></w:r></w:p></w:tc>
+          <w:tc><w:p><w:r><w:t>资产名称</w:t></w:r></w:p></w:tc>
+          <w:tc><w:p><w:r><w:t>${assetName!""}</w:t></w:r></w:p></w:tc>
+        </w:tr>
+
+        <w:tr>
+          <w:tc><w:p><w:r><w:t>资产编码</w:t></w:r></w:p></w:tc>
+          <w:tc><w:p><w:r><w:t>${assetCode!""}</w:t></w:r></w:p></w:tc>
+          <w:tc><w:p><w:r><w:t>资产规格</w:t></w:r></w:p></w:tc>
+          <w:tc><w:p><w:r><w:t>${spec!""}</w:t></w:r></w:p></w:tc>
+        </w:tr>
+
+        <w:tr>
+          <w:tc><w:p><w:r><w:t>存放地点</w:t></w:r></w:p></w:tc>
+          <w:tc w:span="3"><w:p><w:r><w:t>${location!""}</w:t></w:r></w:p></w:tc>
+        </w:tr>
+
+        <w:tr>
+          <w:tc><w:p><w:r><w:t>申请原因</w:t></w:r></w:p></w:tc>
+          <w:tc w:span="3"><w:p><w:r><w:t>${reason!""}</w:t></w:r></w:p></w:tc>
+        </w:tr>
+
+        <w:tr>
+          <w:tc><w:p><w:r><w:t>审批历史</w:t></w:r></w:p></w:tc>
+          <w:tc w:span="3">
+            <#list approvalHistoryList as item>
+            <w:p>
+              <w:r>
+                <w:t>${item}</w:t>
+              </w:r>
+            </w:p>
+            </#list>
+          </w:tc>
+        </w:tr>
+      </w:tbl>
+    </wx:sect>
+  </w:body>
+</w:wordDocument>

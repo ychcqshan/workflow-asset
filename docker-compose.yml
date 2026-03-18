@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  eam-mysql:
+    image: mysql:8.0
+    container_name: eam-mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: eam
+    volumes:
+      - ./docker/mysql/data:/var/lib/mysql
+      - ./docs/init_rbac.sql:/docker-entrypoint-initdb.d/init.sql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+
+  eam-redis:
+    image: redis:7.0
+    container_name: eam-redis
+    ports:
+      - "6379:6379"
+    restart: always

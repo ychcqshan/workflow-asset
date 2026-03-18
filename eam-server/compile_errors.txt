@@ -1,0 +1,472 @@
+﻿
+[ERROR] COMPILATION E
+RROR : 
+[ERROR] /E:/project/w
+orkflow-asset/eam-ser
+ver/src/main/java/com
+/eam/workflow/control
+ler/AmsRequestBillCon
+troller.java:[73,15] 
+找不到符号
+[ERROR] /E:/project/w
+orkflow-asset/eam-ser
+ver/src/main/java/com
+/eam/workflow/control
+ler/AmsRequestBillCon
+troller.java:[74,15] 
+找不到符号
+[ERROR] /E:/project/w
+orkflow-asset/eam-ser
+ver/src/main/java/com
+/eam/workflow/control
+ler/AmsRequestBillCon
+troller.java:[75,15] 
+找不到符号
+[ERROR] /E:/project/w
+orkflow-asset/eam-ser
+ver/src/main/java/com
+/eam/workflow/control
+ler/AmsRequestBillCon
+troller.java:[76,15] 
+找不到符号
+[ERROR] /E:/project/w
+orkflow-asset/eam-ser
+ver/src/main/java/com
+/eam/workflow/control
+ler/AmsRequestBillCon
+troller.java:[77,15] 
+找不到符号
+[ERROR] /E:/project/w
+orkflow-asset/eam-ser
+ver/src/main/java/com
+/eam/workflow/control
+ler/AmsRequestBillCon
+troller.java:[83,19] 
+找不到符号
+[ERROR] /E:/project/w
+orkflow-asset/eam-ser
+ver/src/main/java/com
+/eam/workflow/control
+ler/AmsRequestBillCon
+troller.java:[84,19] 
+找不到符号
+[ERROR] /E:/project/w
+orkflow-asset/eam-ser
+ver/src/main/java/com
+/eam/workflow/control
+ler/AmsRequestBillCon
+troller.java:[85,19] 
+找不到符号
+[ERROR] /E:/project/w
+orkflow-asset/eam-ser
+ver/src/main/java/com
+/eam/workflow/control
+ler/AmsRequestBillCon
+troller.java:[86,19] 
+找不到符号
+[ERROR] /E:/project/w
+orkflow-asset/eam-ser
+ver/src/main/java/com
+/eam/workflow/control
+ler/AmsRequestBillCon
+troller.java:[90,23] 
+找不到符号
+[ERROR] /E:/project/w
+orkflow-asset/eam-ser
+ver/src/main/java/com
+/eam/workflow/control
+ler/AmsRequestBillCon
+troller.java:[93,15] 
+找不到符号
+[ERROR] /E:/project/w
+orkflow-asset/eam-ser
+ver/src/main/java/com
+/eam/workflow/control
+ler/AmsRequestBillCon
+troller.java:[94,15] 
+找不到符号
+[ERROR] /E:/project/w
+orkflow-asset/eam-ser
+ver/src/main/java/com
+/eam/workflow/control
+ler/WorkflowDefinitio
+nController.java:[36,
+15] 找不到符号
+[ERROR] /E:/project/w
+orkflow-asset/eam-ser
+ver/src/main/java/com
+/eam/workflow/control
+ler/WorkflowDefinitio
+nController.java:[37,
+15] 找不到符号
+[ERROR] /E:/project/w
+orkflow-asset/eam-ser
+ver/src/main/java/com
+/eam/workflow/control
+ler/WorkflowDefinitio
+nController.java:[38,
+15] 找不到符号
+[ERROR] /E:/project/w
+orkflow-asset/eam-ser
+ver/src/main/java/com
+/eam/workflow/control
+ler/WorkflowDefinitio
+nController.java:[39,
+15] 找不到符号
+[ERROR] /E:/project/w
+orkflow-asset/eam-ser
+ver/src/main/java/com
+/eam/workflow/control
+ler/WorkflowDefinitio
+nController.java:[40,
+15] 找不到符号
+[ERROR] /E:/project/w
+orkflow-asset/eam-ser
+ver/src/main/java/com
+/eam/workflow/control
+ler/WorkflowDefinitio
+nController.java:[41,
+15] 找不到符号
+[ERROR] /E:/project/w
+orkflow-asset/eam-ser
+ver/src/main/java/com
+/eam/workflow/control
+ler/WorkflowDefinitio
+nController.java:[42,
+15] 找不到符号
+[ERROR] /E:/project/w
+orkflow-asset/eam-ser
+ver/src/main/java/com
+/eam/workflow/control
+ler/WorkflowDefinitio
+nController.java:[54,
+13] 找不到符号
+[ERROR] /E:/project/w
+orkflow-asset/eam-ser
+ver/src/main/java/com
+/eam/workflow/control
+ler/WorkflowDefinitio
+nController.java:[66,
+13] 找不到符号
+[ERROR] Failed to exe
+cute goal org.apache.
+maven.plugins:maven-c
+ompiler-plugin:3.11.0
+:compile (default-com
+pile) on project eam-
+server: Compilation f
+ailure: Compilation f
+ailure: 
+[ERROR] /E:/project/w
+orkflow-asset/eam-ser
+ver/src/main/java/com
+/eam/workflow/control
+ler/AmsRequestBillCon
+troller.java:[73,15] 
+找不到符号
+[ERROR]   符号:   方法 se
+tTaskId(java.lang.Str
+ing)
+[ERROR]   位置: 类型为com.
+eam.workflow.entity.v
+o.WorkflowTaskVO的变量 v
+o
+[ERROR] /E:/project/w
+orkflow-asset/eam-ser
+ver/src/main/java/com
+/eam/workflow/control
+ler/AmsRequestBillCon
+troller.java:[74,15] 
+找不到符号
+[ERROR]   符号:   方法 se
+tTaskName(java.lang.S
+tring)
+[ERROR]   位置: 类型为com.
+eam.workflow.entity.v
+o.WorkflowTaskVO的变量 v
+o
+[ERROR] /E:/project/w
+orkflow-asset/eam-ser
+ver/src/main/java/com
+/eam/workflow/control
+ler/AmsRequestBillCon
+troller.java:[75,15] 
+找不到符号
+[ERROR]   符号:   方法 se
+tProcessInstanceId(ja
+va.lang.String)
+[ERROR]   位置: 类型为com.
+eam.workflow.entity.v
+o.WorkflowTaskVO的变量 v
+o
+[ERROR] /E:/project/w
+orkflow-asset/eam-ser
+ver/src/main/java/com
+/eam/workflow/control
+ler/AmsRequestBillCon
+troller.java:[76,15] 
+找不到符号
+[ERROR]   符号:   方法 se
+tAssignee(java.lang.S
+tring)
+[ERROR]   位置: 类型为com.
+eam.workflow.entity.v
+o.WorkflowTaskVO的变量 v
+o
+[ERROR] /E:/project/w
+orkflow-asset/eam-ser
+ver/src/main/java/com
+/eam/workflow/control
+ler/AmsRequestBillCon
+troller.java:[77,15] 
+找不到符号
+[ERROR]   符号:   方法 se
+tCreateTime(java.util
+.Date)
+[ERROR]   位置: 类型为com.
+eam.workflow.entity.v
+o.WorkflowTaskVO的变量 v
+o
+[ERROR] /E:/project/w
+orkflow-asset/eam-ser
+ver/src/main/java/com
+/eam/workflow/control
+ler/AmsRequestBillCon
+troller.java:[83,19] 
+找不到符号
+[ERROR]   符号:   方法 se
+tBillId(java.lang.Str
+ing)
+[ERROR]   位置: 类型为com.
+eam.workflow.entity.v
+o.WorkflowTaskVO的变量 v
+o
+[ERROR] /E:/project/w
+orkflow-asset/eam-ser
+ver/src/main/java/com
+/eam/workflow/control
+ler/AmsRequestBillCon
+troller.java:[84,19] 
+找不到符号
+[ERROR]   符号:   方法 se
+tBillType(java.lang.S
+tring)
+[ERROR]   位置: 类型为com.
+eam.workflow.entity.v
+o.WorkflowTaskVO的变量 v
+o
+[ERROR] /E:/project/w
+orkflow-asset/eam-ser
+ver/src/main/java/com
+/eam/workflow/control
+ler/AmsRequestBillCon
+troller.java:[85,19] 
+找不到符号
+[ERROR]   符号:   方法 se
+tReason(java.lang.Str
+ing)
+[ERROR]   位置: 类型为com.
+eam.workflow.entity.v
+o.WorkflowTaskVO的变量 v
+o
+[ERROR] /E:/project/w
+orkflow-asset/eam-ser
+ver/src/main/java/com
+/eam/workflow/control
+ler/AmsRequestBillCon
+troller.java:[86,19] 
+找不到符号
+[ERROR]   符号:   方法 se
+tAssetId(java.lang.Lo
+ng)
+[ERROR]   位置: 类型为com.
+eam.workflow.entity.v
+o.WorkflowTaskVO的变量 v
+o
+[ERROR] /E:/project/w
+orkflow-asset/eam-ser
+ver/src/main/java/com
+/eam/workflow/control
+ler/AmsRequestBillCon
+troller.java:[90,23] 
+找不到符号
+[ERROR]   符号:   方法 se
+tAssetName(java.lang.
+String)
+[ERROR]   位置: 类型为com.
+eam.workflow.entity.v
+o.WorkflowTaskVO的变量 v
+o
+[ERROR] /E:/project/w
+orkflow-asset/eam-ser
+ver/src/main/java/com
+/eam/workflow/control
+ler/AmsRequestBillCon
+troller.java:[93,15] 
+找不到符号
+[ERROR]   符号:   方法 se
+tProcessDefinitionId(
+java.lang.String)
+[ERROR]   位置: 类型为com.
+eam.workflow.entity.v
+o.WorkflowTaskVO的变量 v
+o
+[ERROR] /E:/project/w
+orkflow-asset/eam-ser
+ver/src/main/java/com
+/eam/workflow/control
+ler/AmsRequestBillCon
+troller.java:[94,15] 
+找不到符号
+[ERROR]   符号:   方法 se
+tTaskDefinitionKey(ja
+va.lang.String)
+[ERROR]   位置: 类型为com.
+eam.workflow.entity.v
+o.WorkflowTaskVO的变量 v
+o
+[ERROR] /E:/project/w
+orkflow-asset/eam-ser
+ver/src/main/java/com
+/eam/workflow/control
+ler/WorkflowDefinitio
+nController.java:[36,
+15] 找不到符号
+[ERROR]   符号:   方法 se
+tId(java.lang.String)
+[ERROR]   位置: 类型为com.
+eam.workflow.entity.v
+o.ProcessDefinitionVO
+的变量 vo
+[ERROR] /E:/project/w
+orkflow-asset/eam-ser
+ver/src/main/java/com
+/eam/workflow/control
+ler/WorkflowDefinitio
+nController.java:[37,
+15] 找不到符号
+[ERROR]   符号:   方法 se
+tName(java.lang.Strin
+g)
+[ERROR]   位置: 类型为com.
+eam.workflow.entity.v
+o.ProcessDefinitionVO
+的变量 vo
+[ERROR] /E:/project/w
+orkflow-asset/eam-ser
+ver/src/main/java/com
+/eam/workflow/control
+ler/WorkflowDefinitio
+nController.java:[38,
+15] 找不到符号
+[ERROR]   符号:   方法 se
+tKey(java.lang.String
+)
+[ERROR]   位置: 类型为com.
+eam.workflow.entity.v
+o.ProcessDefinitionVO
+的变量 vo
+[ERROR] /E:/project/w
+orkflow-asset/eam-ser
+ver/src/main/java/com
+/eam/workflow/control
+ler/WorkflowDefinitio
+nController.java:[39,
+15] 找不到符号
+[ERROR]   符号:   方法 se
+tVersion(int)
+[ERROR]   位置: 类型为com.
+eam.workflow.entity.v
+o.ProcessDefinitionVO
+的变量 vo
+[ERROR] /E:/project/w
+orkflow-asset/eam-ser
+ver/src/main/java/com
+/eam/workflow/control
+ler/WorkflowDefinitio
+nController.java:[40,
+15] 找不到符号
+[ERROR]   符号:   方法 se
+tDeploymentId(java.la
+ng.String)
+[ERROR]   位置: 类型为com.
+eam.workflow.entity.v
+o.ProcessDefinitionVO
+的变量 vo
+[ERROR] /E:/project/w
+orkflow-asset/eam-ser
+ver/src/main/java/com
+/eam/workflow/control
+ler/WorkflowDefinitio
+nController.java:[41,
+15] 找不到符号
+[ERROR]   符号:   方法 se
+tResourceName(java.la
+ng.String)
+[ERROR]   位置: 类型为com.
+eam.workflow.entity.v
+o.ProcessDefinitionVO
+的变量 vo
+[ERROR] /E:/project/w
+orkflow-asset/eam-ser
+ver/src/main/java/com
+/eam/workflow/control
+ler/WorkflowDefinitio
+nController.java:[42,
+15] 找不到符号
+[ERROR]   符号:   方法 se
+tDescription(java.lan
+g.String)
+[ERROR]   位置: 类型为com.
+eam.workflow.entity.v
+o.ProcessDefinitionVO
+的变量 vo
+[ERROR] /E:/project/w
+orkflow-asset/eam-ser
+ver/src/main/java/com
+/eam/workflow/control
+ler/WorkflowDefinitio
+nController.java:[54,
+13] 找不到符号
+[ERROR]   符号:   变量 lo
+g
+[ERROR]   位置: 类 com.e
+am.workflow.controlle
+r.WorkflowDefinitionC
+ontroller
+[ERROR] /E:/project/w
+orkflow-asset/eam-ser
+ver/src/main/java/com
+/eam/workflow/control
+ler/WorkflowDefinitio
+nController.java:[66,
+13] 找不到符号
+[ERROR]   符号:   变量 lo
+g
+[ERROR]   位置: 类 com.e
+am.workflow.controlle
+r.WorkflowDefinitionC
+ontroller
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the fu
+ll stack trace of the
+ errors, re-run Maven
+ with the -e switch.
+[ERROR] Re-run Maven 
+using the -X switch t
+o enable full debug l
+ogging.
+[ERROR] 
+[ERROR] For more info
+rmation about the err
+ors and possible solu
+tions, please read th
+e following articles:
+[ERROR] [Help 1] http
+://cwiki.apache.org/c
+onfluence/display/MAV
+EN/MojoFailureExcepti
+on
+
+

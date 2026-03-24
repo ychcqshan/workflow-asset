@@ -5,20 +5,15 @@ echo =========================================
 
 echo.
 echo 查找并关闭占用 9000 端口的后端服务...
-for /f "tokens=5" %%a in ('netstat -ano ^| findstr :9000 ^| findstr LISTENING') do (
-    echo 发现进程 PID: %%a，正在终止...
-    taskkill /F /PID %%a
-)
+powershell -Command "Get-NetTCPConnection -LocalPort 9000 -ErrorAction SilentlyContinue | ForEach-Object { if ($_.OwningProcess -gt 0) { echo \"发现进程 PID: $($_.OwningProcess)，正在终止...\"; Stop-Process -Id $_.OwningProcess -Force } }"
 
 echo.
 echo 查找并关闭占用 3000 端口的前端服务...
-for /f "tokens=5" %%a in ('netstat -ano ^| findstr :3000 ^| findstr LISTENING') do (
-    echo 发现进程 PID: %%a，正在终止...
-    taskkill /F /PID %%a
-)
+powershell -Command "Get-NetTCPConnection -LocalPort 3000 -ErrorAction SilentlyContinue | ForEach-Object { if ($_.OwningProcess -gt 0) { echo \"发现进程 PID: $($_.OwningProcess)，正在终止...\"; Stop-Process -Id $_.OwningProcess -Force } }"
 
 echo.
 echo =========================================
-echo 系统服务已关闭。
+echo 系统服务已收到终止指令。
 echo =========================================
 pause
+

@@ -1,0 +1,433 @@
+﻿
+> 2026-03-23T23:18:31
+.733+08:00 ERROR 5510
+4 --- [eam-server] [n
+io-9000-exec-6] c.e.c
+.config.JwtAuthentica
+tionFilter     : Coul
+d not set user authen
+tication in security 
+context
+  
+  io.jsonwebtoken.Exp
+iredJwtException: JWT
+ expired 611671733 mi
+lliseconds ago at 202
+6-03-16T13:24:00.000Z
+. Current time: 2026-
+03-23T15:18:31.733Z. 
+Allowed clock skew: 0
+ milliseconds.
+  	at io.jsonwebtoken
+.impl.DefaultJwtParse
+r.parse(DefaultJwtPar
+ser.java:682) ~[jjwt-
+impl-0.12.5.jar:0.12.
+5]
+  	at io.jsonwebtoken
+.impl.DefaultJwtParse
+r.parse(DefaultJwtPar
+ser.java:362) ~[jjwt-
+impl-0.12.5.jar:0.12.
+5]
+  	at io.jsonwebtoken
+.impl.DefaultJwtParse
+r.parse(DefaultJwtPar
+ser.java:94) ~[jjwt-i
+mpl-0.12.5.jar:0.12.5
+]
+  	at io.jsonwebtoken
+.impl.io.AbstractPars
+er.parse(AbstractPars
+er.java:36) ~[jjwt-im
+pl-0.12.5.jar:0.12.5]
+  	at io.jsonwebtoken
+.impl.io.AbstractPars
+er.parse(AbstractPars
+er.java:29) ~[jjwt-im
+pl-0.12.5.jar:0.12.5]
+  	at io.jsonwebtoken
+.impl.DefaultJwtParse
+r.parseSignedClaims(D
+efaultJwtParser.java:
+821) ~[jjwt-impl-0.12
+.5.jar:0.12.5]
+  	at com.eam.common.
+utils.JwtUtils.parseT
+oken(JwtUtils.java:40
+) ~[classes/:na]
+  	at com.eam.common.
+config.JwtAuthenticat
+ionFilter.doFilterInt
+ernal(JwtAuthenticati
+onFilter.java:36) ~[c
+lasses/:na]
+  	at org.springframe
+work.web.filter.OnceP
+erRequestFilter.doFil
+ter(OncePerRequestFil
+ter.java:116) ~[sprin
+g-web-6.1.4.jar:6.1.4
+]
+  	at org.springframe
+work.security.web.Fil
+terChainProxy$Virtual
+FilterChain.doFilter(
+FilterChainProxy.java
+:374) ~[spring-securi
+ty-web-6.2.2.jar:6.2.
+2]
+  	at org.springframe
+work.security.web.aut
+hentication.logout.Lo
+goutFilter.doFilter(L
+ogoutFilter.java:107)
+ ~[spring-security-we
+b-6.2.2.jar:6.2.2]
+  	at org.springframe
+work.security.web.aut
+hentication.logout.Lo
+goutFilter.doFilter(L
+ogoutFilter.java:93) 
+~[spring-security-web
+-6.2.2.jar:6.2.2]
+  	at org.springframe
+work.security.web.Fil
+terChainProxy$Virtual
+FilterChain.doFilter(
+FilterChainProxy.java
+:374) ~[spring-securi
+ty-web-6.2.2.jar:6.2.
+2]
+  	at org.springframe
+work.web.filter.CorsF
+ilter.doFilterInterna
+l(CorsFilter.java:91)
+ ~[spring-web-6.1.4.j
+ar:6.1.4]
+  	at org.springframe
+work.web.filter.OnceP
+erRequestFilter.doFil
+ter(OncePerRequestFil
+ter.java:116) ~[sprin
+g-web-6.1.4.jar:6.1.4
+]
+  	at org.springframe
+work.security.web.Fil
+terChainProxy$Virtual
+FilterChain.doFilter(
+FilterChainProxy.java
+:374) ~[spring-securi
+ty-web-6.2.2.jar:6.2.
+2]
+  	at org.springframe
+work.security.web.hea
+der.HeaderWriterFilte
+r.doHeadersAfter(Head
+erWriterFilter.java:9
+0) ~[spring-security-
+web-6.2.2.jar:6.2.2]
+  	at org.springframe
+work.security.web.hea
+der.HeaderWriterFilte
+r.doFilterInternal(He
+aderWriterFilter.java
+:75) ~[spring-securit
+y-web-6.2.2.jar:6.2.2
+]
+  	at org.springframe
+work.web.filter.OnceP
+erRequestFilter.doFil
+ter(OncePerRequestFil
+ter.java:116) ~[sprin
+g-web-6.1.4.jar:6.1.4
+]
+  	at org.springframe
+work.security.web.Fil
+terChainProxy$Virtual
+FilterChain.doFilter(
+FilterChainProxy.java
+:374) ~[spring-securi
+ty-web-6.2.2.jar:6.2.
+2]
+  	at org.springframe
+work.security.web.con
+text.SecurityContextH
+olderFilter.doFilter(
+SecurityContextHolder
+Filter.java:82) ~[spr
+ing-security-web-6.2.
+2.jar:6.2.2]
+  	at org.springframe
+work.security.web.con
+text.SecurityContextH
+olderFilter.doFilter(
+SecurityContextHolder
+Filter.java:69) ~[spr
+ing-security-web-6.2.
+2.jar:6.2.2]
+  	at org.springframe
+work.security.web.Fil
+terChainProxy$Virtual
+FilterChain.doFilter(
+FilterChainProxy.java
+:374) ~[spring-securi
+ty-web-6.2.2.jar:6.2.
+2]
+  	at org.springframe
+work.security.web.con
+text.request.async.We
+bAsyncManagerIntegrat
+ionFilter.doFilterInt
+ernal(WebAsyncManager
+IntegrationFilter.jav
+a:62) ~[spring-securi
+ty-web-6.2.2.jar:6.2.
+2]
+  	at org.springframe
+work.web.filter.OnceP
+erRequestFilter.doFil
+ter(OncePerRequestFil
+ter.java:116) ~[sprin
+g-web-6.1.4.jar:6.1.4
+]
+  	at org.springframe
+work.security.web.Fil
+terChainProxy$Virtual
+FilterChain.doFilter(
+FilterChainProxy.java
+:374) ~[spring-securi
+ty-web-6.2.2.jar:6.2.
+2]
+  	at org.springframe
+work.security.web.ses
+sion.DisableEncodeUrl
+Filter.doFilterIntern
+al(DisableEncodeUrlFi
+lter.java:42) ~[sprin
+g-security-web-6.2.2.
+jar:6.2.2]
+  	at org.springframe
+work.web.filter.OnceP
+erRequestFilter.doFil
+ter(OncePerRequestFil
+ter.java:116) ~[sprin
+g-web-6.1.4.jar:6.1.4
+]
+> 2026-03-23T23:18:31
+.733+08:00 ERROR 5510
+4 --- [eam-server] [n
+io-9000-exec-5] c.e.c
+.config.JwtAuthentica
+tionFilter     : Coul
+d not set user authen
+tication in security 
+context
+  
+  io.jsonwebtoken.Exp
+iredJwtException: JWT
+ expired 611671733 mi
+lliseconds ago at 202
+6-03-16T13:24:00.000Z
+. Current time: 2026-
+03-23T15:18:31.733Z. 
+Allowed clock skew: 0
+ milliseconds.
+  	at io.jsonwebtoken
+.impl.DefaultJwtParse
+r.parse(DefaultJwtPar
+ser.java:682) ~[jjwt-
+impl-0.12.5.jar:0.12.
+5]
+  	at io.jsonwebtoken
+.impl.DefaultJwtParse
+r.parse(DefaultJwtPar
+ser.java:362) ~[jjwt-
+impl-0.12.5.jar:0.12.
+5]
+  	at io.jsonwebtoken
+.impl.DefaultJwtParse
+r.parse(DefaultJwtPar
+ser.java:94) ~[jjwt-i
+mpl-0.12.5.jar:0.12.5
+]
+  	at io.jsonwebtoken
+.impl.io.AbstractPars
+er.parse(AbstractPars
+er.java:36) ~[jjwt-im
+pl-0.12.5.jar:0.12.5]
+  	at io.jsonwebtoken
+.impl.io.AbstractPars
+er.parse(AbstractPars
+er.java:29) ~[jjwt-im
+pl-0.12.5.jar:0.12.5]
+  	at io.jsonwebtoken
+.impl.DefaultJwtParse
+r.parseSignedClaims(D
+efaultJwtParser.java:
+821) ~[jjwt-impl-0.12
+.5.jar:0.12.5]
+  	at com.eam.common.
+utils.JwtUtils.parseT
+oken(JwtUtils.java:40
+) ~[classes/:na]
+  	at com.eam.common.
+config.JwtAuthenticat
+ionFilter.doFilterInt
+ernal(JwtAuthenticati
+onFilter.java:36) ~[c
+lasses/:na]
+  	at org.springframe
+work.web.filter.OnceP
+erRequestFilter.doFil
+ter(OncePerRequestFil
+ter.java:116) ~[sprin
+g-web-6.1.4.jar:6.1.4
+]
+  	at org.springframe
+work.security.web.Fil
+terChainProxy$Virtual
+FilterChain.doFilter(
+FilterChainProxy.java
+:374) ~[spring-securi
+ty-web-6.2.2.jar:6.2.
+2]
+  	at org.springframe
+work.security.web.aut
+hentication.logout.Lo
+goutFilter.doFilter(L
+ogoutFilter.java:107)
+ ~[spring-security-we
+b-6.2.2.jar:6.2.2]
+  	at org.springframe
+work.security.web.aut
+hentication.logout.Lo
+goutFilter.doFilter(L
+ogoutFilter.java:93) 
+~[spring-security-web
+-6.2.2.jar:6.2.2]
+  	at org.springframe
+work.security.web.Fil
+terChainProxy$Virtual
+FilterChain.doFilter(
+FilterChainProxy.java
+:374) ~[spring-securi
+ty-web-6.2.2.jar:6.2.
+2]
+  	at org.springframe
+work.web.filter.CorsF
+ilter.doFilterInterna
+l(CorsFilter.java:91)
+ ~[spring-web-6.1.4.j
+ar:6.1.4]
+  	at org.springframe
+work.web.filter.OnceP
+erRequestFilter.doFil
+ter(OncePerRequestFil
+ter.java:116) ~[sprin
+g-web-6.1.4.jar:6.1.4
+]
+  	at org.springframe
+work.security.web.Fil
+terChainProxy$Virtual
+FilterChain.doFilter(
+FilterChainProxy.java
+:374) ~[spring-securi
+ty-web-6.2.2.jar:6.2.
+2]
+  	at org.springframe
+work.security.web.hea
+der.HeaderWriterFilte
+r.doHeadersAfter(Head
+erWriterFilter.java:9
+0) ~[spring-security-
+web-6.2.2.jar:6.2.2]
+  	at org.springframe
+work.security.web.hea
+der.HeaderWriterFilte
+r.doFilterInternal(He
+aderWriterFilter.java
+:75) ~[spring-securit
+y-web-6.2.2.jar:6.2.2
+]
+  	at org.springframe
+work.web.filter.OnceP
+erRequestFilter.doFil
+ter(OncePerRequestFil
+ter.java:116) ~[sprin
+g-web-6.1.4.jar:6.1.4
+]
+  	at org.springframe
+work.security.web.Fil
+terChainProxy$Virtual
+FilterChain.doFilter(
+FilterChainProxy.java
+:374) ~[spring-securi
+ty-web-6.2.2.jar:6.2.
+2]
+  	at org.springframe
+work.security.web.con
+text.SecurityContextH
+olderFilter.doFilter(
+SecurityContextHolder
+Filter.java:82) ~[spr
+ing-security-web-6.2.
+2.jar:6.2.2]
+  	at org.springframe
+work.security.web.con
+text.SecurityContextH
+olderFilter.doFilter(
+SecurityContextHolder
+Filter.java:69) ~[spr
+ing-security-web-6.2.
+2.jar:6.2.2]
+  	at org.springframe
+work.security.web.Fil
+terChainProxy$Virtual
+FilterChain.doFilter(
+FilterChainProxy.java
+:374) ~[spring-securi
+ty-web-6.2.2.jar:6.2.
+2]
+  	at org.springframe
+work.security.web.con
+text.request.async.We
+bAsyncManagerIntegrat
+ionFilter.doFilterInt
+ernal(WebAsyncManager
+IntegrationFilter.jav
+a:62) ~[spring-securi
+ty-web-6.2.2.jar:6.2.
+2]
+  	at org.springframe
+work.web.filter.OnceP
+erRequestFilter.doFil
+ter(OncePerRequestFil
+ter.java:116) ~[sprin
+g-web-6.1.4.jar:6.1.4
+]
+  	at org.springframe
+work.security.web.Fil
+terChainProxy$Virtual
+FilterChain.doFilter(
+FilterChainProxy.java
+:374) ~[spring-securi
+ty-web-6.2.2.jar:6.2.
+2]
+  	at org.springframe
+work.security.web.ses
+sion.DisableEncodeUrl
+Filter.doFilterIntern
+al(DisableEncodeUrlFi
+lter.java:42) ~[sprin
+g-security-web-6.2.2.
+jar:6.2.2]
+  	at org.springframe
+work.web.filter.OnceP
+erRequestFilter.doFil
+ter(OncePerRequestFil
+ter.java:116) ~[sprin
+g-web-6.1.4.jar:6.1.4
+]
+
+

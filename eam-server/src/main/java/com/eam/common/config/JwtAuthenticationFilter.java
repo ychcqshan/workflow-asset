@@ -2,6 +2,7 @@ package com.eam.common.config;
 
 import com.eam.common.utils.JwtUtils;
 import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.ExpiredJwtException;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -42,6 +43,8 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
                     authentication.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
                     SecurityContextHolder.getContext().setAuthentication(authentication);
                 }
+            } catch (ExpiredJwtException e) {
+                logger.warn("JWT token has expired: " + e.getMessage());
             } catch (Exception e) {
                 logger.error("Could not set user authentication in security context", e);
             }

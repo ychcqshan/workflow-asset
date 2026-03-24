@@ -29,7 +29,7 @@
 | 服务 | 端口 | 说明 |
 |---|---|---|
 | **后端 API** | `9000` | `server.port=9000` |
-| **前端 Dev** | `5173` | Vite 默认 |
+| **前端 Dev** | `3000` | Vite 默认 |
 | **MySQL** | `3306` | Docker: `terminal-monitor-mysql` |
 | **Redis** | `6379` | 可选，Token 缓存 |
 
@@ -195,7 +195,7 @@ src/
    - 连接: `docker exec -i terminal-monitor-mysql mysql -u root -ppassword`
    - 初始化: 依次执行 `docs/init_rbac.sql`, `docs/init_asset.sql`, `docs/init_workflow.sql`
 2. **后端**: `cd eam-server && mvn spring-boot:run` (端口 **9000**)
-3. **前端**: `cd eam-ui && npm run dev` (端口 **5173**)
+3. **前端**: `cd eam-ui && npm run dev` (端口 **3000**)
 
 ## 🔑 API 路径约定
 - 系统: `/sys/login`, `/sys/user/**`, `/sys/dept/**`

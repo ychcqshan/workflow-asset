@@ -1,0 +1,4 @@
+﻿id	parent_id	dept_name	order_num	leader_id	director_id	status	del_flag	create_time	update_time
+1	0	?????	0	1	1	0	0	2026-03-06 11:49:27	2026-03-15 16:38:48
+2	1	????	0	1	1	0	0	2026-03-06 11:49:27	2026-03-15 16:38:48
+3	2	???	0	1	1	0	0	2026-03-06 11:49:27	2026-03-09 03:39:49

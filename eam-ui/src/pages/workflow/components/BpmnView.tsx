@@ -91,23 +91,23 @@ const BpmnView: React.FC<BpmnViewProps> = ({ xml, loading: propLoading, activeNo
     const isLoading = propLoading || rendering;
 
     return (
-        <div style={{ position: 'relative', width: '100%', height, border: '1px solid #f0f0f0', borderRadius: '8px', overflow: 'hidden', background: '#fff' }}>
+        <div style={{ position: 'relative', width: '100%', height, border: '1px solid #e6f4ff', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 4px 16px rgba(0, 0, 0, 0.04)', background: '#fff' }}>
             <Spin spinning={isLoading} tip="加载流程图...">
                 <div ref={containerRef} style={{ width: '100%', height }} />
             </Spin>
 
             {/* 工具栏 */}
             {!isLoading && xml && (
-                <div style={{ position: 'absolute', right: 16, top: 16, background: 'rgba(255,255,255,0.9)', padding: '4px 8px', borderRadius: '6px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
-                    <Space size={4}>
+                <div style={{ position: 'absolute', right: 16, top: 16, backdropFilter: 'blur(8px)', background: 'rgba(255, 255, 255, 0.75)', padding: '6px 12px', borderRadius: '10px', boxShadow: '0 4px 12px rgba(0, 0, 0, 0.08)', border: '1px solid rgba(255, 255, 255, 0.6)' }}>
+                    <Space size={2}>
                         <Tooltip title="放大">
-                            <Button type="text" size="small" icon={<ZoomInOutlined />} onClick={handleZoomIn} />
+                            <Button type="text" size="small" icon={<ZoomInOutlined />} onClick={handleZoomIn} style={{ color: '#595959' }} />
                         </Tooltip>
                         <Tooltip title="缩小">
-                            <Button type="text" size="small" icon={<ZoomOutOutlined />} onClick={handleZoomOut} />
+                            <Button type="text" size="small" icon={<ZoomOutOutlined />} onClick={handleZoomOut} style={{ color: '#595959' }} />
                         </Tooltip>
                         <Tooltip title="最适大小">
-                            <Button type="text" size="small" icon={<ExpandOutlined />} onClick={handleZoomFit} />
+                            <Button type="text" size="small" icon={<ExpandOutlined />} onClick={handleZoomFit} style={{ color: '#1677ff' }} />
                         </Tooltip>
                         <Tooltip title="重置">
                             <Button type="text" size="small" icon={<ReloadOutlined />} onClick={handleZoomReset} />
@@ -117,19 +117,32 @@ const BpmnView: React.FC<BpmnViewProps> = ({ xml, loading: propLoading, activeNo
             )}
 
             <style>{`
+                @keyframes bpmn-pulse {
+                    0% { filter: drop-shadow(0 0 3px rgba(22, 119, 255, 0.4)); }
+                    50% { filter: drop-shadow(0 0 12px rgba(22, 119, 255, 0.8)); }
+                    100% { filter: drop-shadow(0 0 3px rgba(22, 119, 255, 0.4)); }
+                }
                 .highlight-node:not(.djs-connection) .djs-visual > :nth-child(1) {
-                    fill: #e6f7ff !important;
-                    stroke: #1890ff !important;
-                    stroke-width: 3px !important;
-                    filter: drop-shadow(0 0 4px rgba(24, 144, 255, 0.5)) !important;
+                    fill: #e6f4ff !important;
+                    stroke: #1677ff !important;
+                    stroke-width: 2.5px !important;
+                    animation: bpmn-pulse 2s infinite ease-in-out;
                 }
                 .highlight-node .djs-label {
-                    fill: #1890ff !important;
-                    font-weight: bold !important;
+                    fill: #1677ff !important;
+                    font-weight: 600 !important;
                 }
                 .djs-container {
-                    background: radial-gradient(circle, #f0f0f0 1px, transparent 1px);
-                    background-size: 20px 20px;
+                    background-color: #ffffff;
+                    background-image: radial-gradient(#d0e5ff 1.5px, transparent 1.5px);
+                    background-size: 16px 16px;
+                }
+                .djs-element rect {
+                    rx: 8px !important;
+                    ry: 8px !important;
+                }
+                .djs-connection path {
+                    stroke-linejoin: round !important;
                 }
             `}</style>
         </div>

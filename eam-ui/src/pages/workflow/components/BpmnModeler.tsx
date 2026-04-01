@@ -17,6 +17,11 @@ import {
 } from 'bpmn-js-properties-panel';
 import CamundaModdleDescriptor from 'camunda-bpmn-moddle/resources/camunda.json';
 import '@bpmn-io/properties-panel/dist/assets/properties-panel.css';
+import customTranslate from './translate/customTranslate';
+
+const translateModule = {
+    translate: [ 'value', customTranslate ]
+};
 
 const INITIAL_XML = `<?xml version="1.0" encoding="UTF-8"?>
 <bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" 
@@ -69,7 +74,8 @@ const BpmnModeler: React.FC<BpmnModelerProps> = ({ xml, onSave, onDeploy, visibl
                 additionalModules: [
                     BpmnPropertiesPanelModule,
                     BpmnPropertiesProviderModule,
-                    CamundaPlatformPropertiesProviderModule
+                    CamundaPlatformPropertiesProviderModule,
+                    translateModule
                 ],
                 moddleExtensions: {
                     camunda: CamundaModdleDescriptor
@@ -147,11 +153,55 @@ const BpmnModeler: React.FC<BpmnModelerProps> = ({ xml, onSave, onDeploy, visibl
                 </Space>
             }
         >
-            <div style={{ display: 'flex', flexDirection: 'row', height: '100%', width: '100%' }}>
+            <div style={{ display: 'flex', flexDirection: 'row', height: '100%', width: '100%', position: 'relative' }}>
+                <style>{`
+                    .djs-container {
+                        background-color: #ffffff !important;
+                        background-image: radial-gradient(#d0e5ff 1.5px, transparent 1.5px) !important;
+                        background-size: 16px 16px !important;
+                    }
+                    /* 工具栏悬浮面板玻璃化 */
+                    .djs-palette {
+                        background: rgba(255, 255, 255, 0.82) !important;
+                        backdrop-filter: blur(10px) !important;
+                        border: 1px solid rgba(22, 119, 255, 0.1) !important;
+                        border-radius: 12px !important;
+                        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06) !important;
+                        left: 24px !important;
+                        top: 24px !important;
+                        width: 48px !important;
+                    }
+                    .djs-palette .entry {
+                        color: #595959 !important;
+                    }
+                    .djs-palette .entry:hover {
+                        color: #1677ff !important;
+                        background-color: rgba(22, 119, 255, 0.08) !important;
+                        border-radius: 6px !important;
+                    }
+                    /* 节点圆角覆写 */
+                    .djs-element rect {
+                        rx: 8px !important;
+                        ry: 8px !important;
+                    }
+                    .djs-connection path {
+                        stroke-linejoin: round !important;
+                    }
+                    /* 属性面板样式收紧 */
+                    .bio-properties-panel {
+                        border-left: 1px solid #f0f0f0 !important;
+                        background-color: #ffffff !important;
+                    }
+                    .bio-properties-panel-header {
+                        background-color: #fafafa !important;
+                        border-bottom: 1px solid #f0f0f0 !important;
+                    }
+                `}</style>
+
                 {/* 绘图区 */}
                 <div 
                     ref={containerRef} 
-                    style={{ flex: 1, height: '100%', position: 'relative', borderRight: '1px solid #f0f0f0' }} 
+                    style={{ flex: 1, height: '100%', position: 'relative' }} 
                 />
                 
                 {/* 属性面板区 */}

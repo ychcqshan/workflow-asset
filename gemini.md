@@ -183,12 +183,7 @@ src/
 | **Phase 10** | 生产加固：权限细化、操作日志、性能优化 | ⬜ 待开始 |
 
 ## ⚠️ 踩坑记录
-- Lombok 与高版本 JDK (25+) 不兼容，需锁定 JDK 17。
-- 不要用 Entity 直接作为登录请求体，会触发 Jackson 反序列化异常，需单独 DTO。
-- 停止后端前检查 Java 僵尸进程 (`Get-Process java`)。
-- Flowable 序列化变量不要传复杂对象，传基本类型或 `Map<String, Object>`。
-- `AmsRequestBill` 没用 Lombok，手写了 getter/setter（可以后续重构加 `@Data`）。
-- `application.yml` 敏感信息已用环境变量占位 (`${MYSQL_PWD:password}`)。
+> 已迁移至 `.context/memories.md`，此处不再维护。
 
 ## 🚀 启动方式
 1. **数据库**: `docker start terminal-monitor-mysql`
